@@ -105,7 +105,7 @@ figcaption {
 }
 
 .content {
-    background-image: url("images/ernesta-vala-gxt05XHaQ9Q-unsplash.jpg");
+    background-image: url("/static/images/ernesta-vala-gxt05XHaQ9Q-unsplash.jpg");
     flex: 1; /* Let the content fill the remaining space */
     background-color: lightgrey;
     margin-bottom: 1rem;
@@ -117,6 +117,7 @@ h1 {
     text-align: start;
     font-size: 3rem;
     margin: 0.5rem;
+    margin-left: 1.5rem;
     font-weight: bold;
 }
 
