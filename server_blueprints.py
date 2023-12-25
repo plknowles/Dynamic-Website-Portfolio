@@ -43,6 +43,7 @@ def signup():
             try:
                 db.session.commit()
                 flash("Account created successfully", category="form_success")
+                return redirect(url_for(blueprints.index))
             except Exception as e:
                 db.session.rollback()
                 print(e)
