@@ -1,0 +1,351 @@
+/*import open sans font*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Formatting for the whole body*/
+body {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    background-color: lightgrey;
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vw;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/*prevents images overflowing on small screens*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*positioning class for figures*/
+.float-left {
+    float: left;
+}
+
+/*positioning class for figures*/
+.float-right {
+    float: right;
+}
+
+/*figure alignment*/
+figure {
+    display: flex;
+    flex-direction: column;
+    max-width: 20%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+/*gives images in main a box shadow*/
+figure img {
+    box-shadow: 0.2rem 0.2rem 0.3rem #888;
+    border: 1px solid #ccc;
+}
+
+/*font styling for captions*/
+figcaption {
+    font-style: italic;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/*logo flexbox*/
+#logo-flexbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: white;
+    font-size: 2rem;
+}
+
+/*logo size*/
+#logo {
+    max-width: 30%;
+    height: auto;
+}
+
+/* CSS flexbox for navigation bar */
+.nav-flexbox {
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: rgb(40, 40, 40);
+    font-size: 1.35rem;
+    height: 100%;
+}
+
+/* Text formatting for nav bar links */
+.navlink {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+/* Hover effects for nav bar links */
+.navlink:hover {
+    color: white;
+    filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.8));
+}
+
+/*current page underline effect*/
+.navlink.active {
+    text-decoration: underline;
+    color: white;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.content {
+    background-image: url("images/ernesta-vala-gxt05XHaQ9Q-unsplash.jpg");
+    flex: 1; /* Let the content fill the remaining space */
+    background-color: lightgrey;
+    margin-bottom: 1rem;
+}
+
+/* h1 header effects*/
+h1 {
+    color: black;
+    text-align: start;
+    font-size: 3rem;
+    margin: 0.5rem;
+    font-weight: bold;
+}
+
+/*main section styling*/
+main {
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-align: start;
+    background-color: rgb(245, 233, 220);
+    text-align: justify;
+    line-height: 200%;
+    margin: 0;
+}
+
+.horizontal-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 100vw;
+}
+
+/*footer styling*/
+footer {
+    border: 1px solid black;
+    color: black;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 0.2rem;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    background-color: lightgrey;
+}
+
+/* Footer heart character that changes colour on hover */
+.heart {
+    color: black;
+}
+
+/* Footer heart character hover effect*/
+.heart:hover {
+    color: red;
+}
+
+/* Footer button link to return to the top of the page */
+#top-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.3rem 1rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.4rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+/* Footer button link hover effect*/
+#top-button:hover {
+    background-color: #0056b3;
+}
+
+/* Error alert style */
+.alert-form_error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+  
+/* Success alert style */
+.alert-form_success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+/* fomatting of lists to have a line break between points*/
+li {
+    margin-bottom: 1rem;
+}
+
+main p {
+    margin-bottom: 3rem; /* Add space between paragraphs */
+}
+
+form {
+    background-color: #fff;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 25rem;
+}
+
+label {
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+.form-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}
+
+/*media controls to enable responsive web design at various screen sizes*/
+@media (max-width: 1130px) {
+    * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+    }
+    
+    .nav-flexbox {
+        flex-direction: row; /* Stack navigation items horizontally on mobile */
+        width: 100vw; /* Ensure it spans the full width of the screen */
+        position: absolute;
+        align-items: center;
+        justify-content: space-evenly;
+        height: auto;
+    }
+
+    .navlink, .navlink.active {
+        margin: 0; /* Remove margin to align navigation links */
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    #logo-flexbox {
+        justify-content: start;
+        flex-direction: column;
+        align-items: center; /* Center align the logo and text */
+        margin: 0;
+        max-width: 10%;
+    }
+
+    #logo {
+        max-width: 50%;
+        height: auto;
+    }
+
+    header {
+        margin-top: 6rem;
+    }
+}
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .nav-flexbox, #logo-flexbox {
+        font-size: 1rem;
+    }
+
+    main, footer, #btn-top {
+        font-size: 0.8rem;
+    }
+
+    #references, figcaption {
+        font-size: 0.7rem;
+    }
+    header {
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .nav-flexbox, #logo-flexbox {
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    main, footer, #btn-top, #references, figcaption {
+        font-size: 0.6rem;
+    }
+    
+    header {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .nav-flexbox, #logo-flexbox {
+        font-size: 0.6rem;
+    }
+
+    main, footer, #btn-top, #references, figcaption {
+        font-size: 0.6rem;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    header {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 440px) {
+    .nav-flexbox, #logo-flexbox {
+        font-size: 0.5rem;
+    }
+
+    header {
+        margin-top: 1rem;
+    }
+}
