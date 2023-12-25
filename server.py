@@ -1,11 +1,11 @@
 from flask import Flask
-from server_blueprints import blueprints
+from blueprints import blueprints
 from os import path
 from database import db
+from config import Config
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "pass"
-app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{path.join(app.root_path, "database.db")}'
+app.config.from_object(Config)
 db.init_app(app)
 
 app.register_blueprint(blueprints, url_prefix='/')

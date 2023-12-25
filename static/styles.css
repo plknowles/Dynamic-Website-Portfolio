@@ -189,6 +189,7 @@ footer {
     color: #721c24;
     background-color: #f8d7da;
     border-color: #f5c6cb;
+    padding-left: 0.5rem;
 }
   
 /* Success alert style */
@@ -196,6 +197,7 @@ footer {
     color: #155724;
     background-color: #d4edda;
     border-color: #c3e6cb;
+    padding-left: 0.5rem;
 }
 
 /* fomatting of lists to have a line break between points*/
