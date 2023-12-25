@@ -3,16 +3,18 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from models import Users, Comments
 from database import db
+from flask_login import login_user, login_required, logout_user, current_user
 
 blueprints = Blueprint(__name__, "blueprints")
 
 bcrypt = Bcrypt()
 
 @blueprints.route('/')
+@login_required
 def home():
     header = "Welcome to my Portfolio"
     title = "Home"
-    return render_template("index.html", title = title, header = header)
+    return render_template("index.html", title = title, header = header, user = current_user)
 
 @blueprints.route("/login", methods = ["GET", "POST"])
 def login():
@@ -24,6 +26,7 @@ def login():
         if user:
             if bcrypt.check_password_hash(user.password_hash, password):
                 flash(f"Login successful! Welcome, {user.name}!", category="form_success")
+                login_user(user, remember = True)
                 return redirect(url_for("blueprints.home"))
             else:
                 flash("Incorrect password.", category="form_error")
@@ -31,7 +34,7 @@ def login():
             flash("Email does not exist.", category="form_error")
 
     title = "Login"
-    return render_template("login.html", header = title, title = title)
+    return render_template("login.html", header = title, title = title, user = current_user)
 
 @blueprints.route("/signup", methods = ["GET", "POST"])
 def signup():
@@ -67,29 +70,35 @@ def signup():
                 flash("An error occurred during account creation. Please try again.", category = "form_error")
 
     title = "Create Account"
-    return render_template("signup.html", header = "Create New User Account", title = title)
+    return render_template("signup.html", header = "Create New User Account", title = title, user = current_user)
 
 @blueprints.route("/logout")
+@login_required
 def logout():
-    title = "Logout"
-    return render_template("logout.html", header = title, title = title)
+    logout_user()
+    flash("Sucessfully logged out.", category="form_success")
+    return redirect(url_for("blueprints.login"))
 
 @blueprints.route("/search")
+@login_required
 def search():
     title = "Site Search"
-    return render_template("search.html", header = title, title = title)
+    return render_template("search.html", header = title, title = title, user = current_user)
 
 @blueprints.route("/about")
+@login_required
 def about():
     title = "About Me"
-    return render_template("about.html", header = title, title = title)
+    return render_template("about.html", header = title, title = title, user = current_user)
 
 @blueprints.route("/experience")
+@login_required
 def experience():
     title = "My Experience"
-    return render_template("experience.html", header = title, title = title)
+    return render_template("experience.html", header = title, title = title, user = current_user)
 
 @blueprints.route("/projects")
+@login_required
 def projects():
     title = "My Projects"
-    return render_template("projects.html", header = title, title = title)
+    return render_template("projects.html", header = title, title = title, user = current_user)
