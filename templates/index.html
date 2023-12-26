@@ -1,1 +1,22 @@
 {% extends 'base.html' %}
+
+{% block main %}
+  
+  <form class = "comment-form" method = "POST">
+    <h2>Comments</h2>
+
+    <ul class = "comments-list">
+        {% for comment in comments %}
+        <li>
+            {{ comment.date.strftime('%Y-%m-%d %H:%M:%S') }} <br>
+            <strong>{{ comment.name }}</strong> - {{ comment.text }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <textarea rows = "4" class = "comment-textarea" name = "comment" placeholder = "Enter new comment here"></textarea>
+    <div>
+    <button type = "submit" class = "comment-form-button">Add Comment</button>
+    </div>
+  </form>
+{% endblock %}

@@ -1,6 +1,9 @@
 /*import open sans font*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+* {
+    box-sizing: border-box;
+}
 /* Formatting for the whole body*/
 body {
     display: flex;
@@ -121,17 +124,22 @@ h1 {
     font-weight: bold;
 }
 
+h2 {
+    color: black;
+    font-size: 2rem;
+    margin: 0.8rem;
+    font-weight: bold;  
+}
+
 /*main section styling*/
 main {
-    gap: 2rem;
     padding: 1rem;
+    padding-right: 2rem;
     justify-content: center;
     font-size: 1.2rem;
-    text-align: start;
     background-color: rgb(245, 233, 220);
     text-align: justify;
     line-height: 200%;
-    margin: 0;
 }
 
 .horizontal-container {
@@ -165,6 +173,10 @@ footer {
 /* Footer heart character hover effect*/
 .heart:hover {
     color: red;
+}
+
+.comment-textarea {
+    width: 100%;
 }
 
 /* Footer button link to return to the top of the page */
@@ -210,13 +222,26 @@ main p {
     margin-bottom: 3rem; /* Add space between paragraphs */
 }
 
-form {
+.login-form {
     background-color: #fff;
     padding: 0.8rem;
-    margin-top: 1rem;
+    margin: 0.6rem;
     border-radius: 0.4rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
     width: 25rem;
+}
+
+.comment-form {
+    background-color: #fff;
+    padding: 3rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
+    margin: 0.6rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 label {
@@ -230,7 +255,21 @@ input {
     box-sizing: border-box;
 }
 
-.form-button {
+.login-form-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-form-button:hover {
+    background-color: #0056b3;
+}
+
+.comment-form-button {
     background-color: #007BFF;
     color: #fff;
     padding: 0.6rem;
@@ -239,7 +278,7 @@ input {
     cursor: pointer;
 }
 
-.form-button:hover {
+.comment-form-button:hover {
     background-color: #0056b3;
 }
 

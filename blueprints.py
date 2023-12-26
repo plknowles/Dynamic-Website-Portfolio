@@ -9,12 +9,28 @@ blueprints = Blueprint(__name__, "blueprints")
 
 bcrypt = Bcrypt()
 
-@blueprints.route('/')
+@blueprints.route('/', methods = ["GET", "POST"])
 @login_required
 def home():
     header = "Welcome to my Portfolio"
+    comments = Comments.query.all()
+    if request.method == "POST":
+        input_comment = request.form.get("comment")
+        if len(input_comment) == 0:
+            flash("Comment cannot be empty", category = "form_error")
+        else:
+            new_comment = Comments(text = input_comment, name = current_user.name)
+            db.session.add(new_comment)
+            try:
+                db.session.commit()
+                flash("Comment added successfully!", category = "form_success")
+                return redirect(url_for("blueprints.home"))
+            except Exception as e:
+                db.session.rollback()
+                print(e)
+                flash("An error occurred. Please try again.", category = "form_error")
     title = "Home"
-    return render_template("index.html", title = title, header = header, user = current_user)
+    return render_template("index.html", title = title, header = header, user = current_user, comments = comments)
 
 @blueprints.route("/login", methods = ["GET", "POST"])
 def login():
