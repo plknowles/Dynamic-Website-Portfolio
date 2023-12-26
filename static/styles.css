@@ -56,42 +56,37 @@ figcaption {
     text-align: center;
 }
 
-/* Logo flexbox */
-#logo-flexbox {
+/* Logo */
+#logo {
     display: flex;
-    flex-direction: row;
+    justify-content: start;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 0.5rem;
     font-weight: bold;
     color: white;
     font-size: 2rem;
-}
-
-/* Logo size */
-#logo {
-    max-width: 30%;
-    height: auto;
+    max-width: 5%;
 }
 
 /* CSS flexbox for navigation bar */
 .nav-flexbox {
-    width: 15vw;
     display: flex;
-    flex-direction: column;
-    align-items: start;
     background-color: rgb(40, 40, 40);
     font-size: 1.35rem;
-    height: 100%;
+    flex-direction: row; /* Stack navigation items horizontally on mobile */
+    width: 100vw; /* Ensure it spans the full width of the screen */
+    position: absolute;
+    align-items: center;
+    justify-content: space-evenly;
+    height: auto;
 }
 
 /* Text formatting for nav bar links */
 .navlink {
     text-decoration: none;
     color: white;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
+    margin: 0;
 }
 
 /* Hover effects for nav bar links */
@@ -104,8 +99,7 @@ figcaption {
 .navlink.active {
     text-decoration: underline;
     color: white;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
+    margin: 0;
 }
 
 .content {
@@ -113,6 +107,11 @@ figcaption {
     flex: 1; /* Fills remaining space */
     background-color: lightgrey;
     margin-bottom: 1rem;
+    width: 100%;
+}
+
+header {
+    margin-top: 6rem;
 }
 
 /* h1 header effects */
@@ -298,44 +297,6 @@ input {
 
 /* Media controls to enable responsive web design at various screen sizes */
 @media (max-width: 1130px) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    
-    .nav-flexbox {
-        flex-direction: row; /* Stack navigation items horizontally on mobile */
-        width: 100vw; /* Ensure it spans the full width of the screen */
-        position: absolute;
-        align-items: center;
-        justify-content: space-evenly;
-        height: auto;
-    }
-
-    .navlink, .navlink.active {
-        margin: 0; /* Remove margin to align navigation links */
-    }
-
-    .content {
-        width: 100%;
-    }
-
-    #logo-flexbox {
-        justify-content: start;
-        flex-direction: column;
-        align-items: center; /* Centre align the logo and text */
-        margin: 0;
-        max-width: 10%;
-    }
-
-    #logo {
-        max-width: 50%;
-        height: auto;
-    }
-
-    header {
-        margin-top: 6rem;
-    }
 }
 
 @media (max-width: 900px) {
@@ -343,7 +304,7 @@ input {
         font-size: 2rem;
     }
 
-    .nav-flexbox, #logo-flexbox {
+    .nav-flexbox {
         font-size: 1rem;
     }
 
@@ -360,7 +321,7 @@ input {
 }
 
 @media (max-width: 700px) {
-    .nav-flexbox, #logo-flexbox {
+    .nav-flexbox {
         font-size: 0.8rem;
     }
 
@@ -378,7 +339,7 @@ input {
 }
 
 @media (max-width: 550px) {
-    .nav-flexbox, #logo-flexbox {
+    .nav-flexbox {
         font-size: 0.6rem;
     }
 
@@ -396,7 +357,7 @@ input {
 }
 
 @media (max-width: 440px) {
-    .nav-flexbox, #logo-flexbox {
+    .nav-flexbox {
         font-size: 0.5rem;
     }
 

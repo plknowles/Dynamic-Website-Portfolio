@@ -5,14 +5,14 @@
     <link rel = "icon" href = "{{ url_for('static', filename='images/favicon.png') }}" type = "image/x-icon">
     <link rel = "stylesheet" href = "{{ url_for('static', filename='styles.css') }}">
     <meta name = "viewport" content = "width=device-width, initial-scale=1">
-    <title>{{ title }}</title>
+    <title>{{ title }} - CMT120 Peter Knowles- </title>
     {% block head %}
     {% endblock %}
     </head>
   <body>
     <div class = "horizontal-container">
       <nav class = "nav-flexbox">
-        <span id = "logo-flexbox"><img id = "logo" src = "{{ url_for('static', filename='images/logo.png') }}" title = "HTML Logo" alt = "HTML Logo">CMT120</span>
+        <img id = "logo" src = "{{ url_for('static', filename='images/logo.png') }}" title = "HTML Logo" alt = "HTML Logo">
         {% if user.is_authenticated %}
         <a class = "navlink" href = '/'>Home</a>
         <a class = "navlink" href = '/about'>About Me</a>
