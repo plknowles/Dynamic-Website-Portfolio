@@ -6,13 +6,15 @@
 
     <ul class = "comments-list">
         {% for comment in comments %}
-        <li class="{{ 'even' if loop.index is even else 'odd' }}">
-            <strong>{{ comment.name }} - {{ comment.date.strftime('%Y-%m-%d %H:%M') }}</strong>
+        <div class="{{ 'even' if loop.index is even else 'odd' }}">
+            <strong>{{ comment.name }}</strong> - {{ comment.date.strftime('%d %B %Y') }} &nbsp; {{ comment.date.strftime('%H:%M') }}
             <br>
             {{ comment.text }}
-        </li>
+        </div>
         {% endfor %}
     </ul>
+
+    <h3>Leave a new comment</h3>
 
     <textarea rows = "4" class = "comment-textarea" name = "comment" placeholder = "Enter new comment here"></textarea>
     <div>

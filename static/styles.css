@@ -132,6 +132,14 @@ h2 {
     font-weight: bold;  
 }
 
+h3 {
+    color: black;
+    font-size: 1rem;
+    margin: 0.4rem;
+    margin-left: 0;
+    font-weight: bold;  
+}
+
 /* Main section styling */
 main {
     padding: 1rem;
@@ -240,12 +248,12 @@ footer {
 }
 
 /* Darker background colour for odd items */
-.comments-list li.odd {
+.comments-list div.odd {
     background-color: #f5f4ef; 
 }
 
 /* Lighter background colour for even items */
-.comments-list li.even {
+.comments-list div.even {
     background-color: #fff; 
 }
 
