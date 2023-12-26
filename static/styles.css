@@ -104,7 +104,6 @@ figcaption {
 
 .content {
     background-image: url("/static/images/ernesta-vala-gxt05XHaQ9Q-unsplash.jpg");
-    flex: 1; /* Fills remaining space */
     background-color: lightgrey;
     margin-bottom: 1rem;
     width: 100%;
@@ -148,13 +147,6 @@ main {
     font-size: 1.2rem;
     /* background-color: #f5f4ef; */
     line-height: 200%;
-}
-
-.horizontal-container {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    width: 100vw;
 }
 
 /* Footer styling */

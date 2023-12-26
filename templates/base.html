@@ -10,9 +10,12 @@
     {% endblock %}
     </head>
   <body>
-    <div class = "horizontal-container">
       <nav class = "nav-flexbox">
-        <img id = "logo" src = "{{ url_for('static', filename='images/logo.png') }}" title = "HTML Logo" alt = "HTML Logo">
+        <div id = "logo">
+          <a href='/'>
+            <img  src = "{{ url_for('static', filename='images/logo.png') }}" title = "HTML Logo" alt = "HTML Logo">
+          </a>
+        </div>
         {% if user.is_authenticated %}
         <a class = "navlink" href = '/'>Home</a>
         <a class = "navlink" href = '/about'>About Me</a>
@@ -48,7 +51,6 @@
           {% endblock %}
         </main>
       </div>
-    </div>
     <footer>
       <span id="footer-text">
       Made with<span class = "heart">&#160;&#10084;&#160;</span>by Peter Knowles - December 2023 - Contact:&#160;<a href = "mailto:knowlesp2@cardiff.ac.uk">knowlesp2@cardiff.ac.uk</a>
