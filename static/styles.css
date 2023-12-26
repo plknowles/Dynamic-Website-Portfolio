@@ -128,6 +128,7 @@ h2 {
     color: black;
     font-size: 2rem;
     margin: 0.8rem;
+    margin-left: 0;
     font-weight: bold;  
 }
 
@@ -138,7 +139,6 @@ main {
     justify-content: center;
     font-size: 1.2rem;
     background-color: rgb(245, 233, 220);
-    text-align: justify;
     line-height: 200%;
 }
 
@@ -213,11 +213,6 @@ footer {
     padding-left: 0.5rem;
 }
 
-/* fomatting of lists to have a line break between points*/
-li {
-    margin-bottom: 1rem;
-}
-
 main p {
     margin-bottom: 3rem; /* Add space between paragraphs */
 }
@@ -242,6 +237,18 @@ main p {
     border-radius: 0.4rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
     width: 100%;
+}
+
+.comments-list {
+    padding: 0;
+}
+
+.comments-list li.odd {
+    background-color: #f5f4ef; /* Light background color for odd items */
+}
+
+.comments-list li.even {
+    background-color: #ffffff; /* Lighter background color for even items */
 }
 
 label {
