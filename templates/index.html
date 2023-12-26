@@ -8,8 +8,9 @@
     <ul class = "comments-list">
         {% for comment in comments %}
         <li>
-            {{ comment.date.strftime('%Y-%m-%d %H:%M:%S') }} <br>
-            <strong>{{ comment.name }}</strong> - {{ comment.text }}
+            {{ comment.name }} - {{ comment.date.strftime('%Y-%m-%d %H:%M') }}
+            <br>
+            {{ comment.text }}
         </li>
         {% endfor %}
     </ul>
