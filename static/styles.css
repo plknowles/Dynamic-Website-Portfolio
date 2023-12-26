@@ -1,10 +1,10 @@
-/*import open sans font*/
+/*import open sans font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 * {
     box-sizing: border-box;
 }
-/* Formatting for the whole body*/
+/* Formatting for the whole body */
 body {
     display: flex;
     flex-direction: row;
@@ -17,23 +17,23 @@ body {
     overflow-x: hidden;
 }
 
-/*prevents images overflowing on small screens*/
+/* Prevents images overflowing on small screens */
 img {
     max-width: 100%;
     height: auto;
 }
 
-/*positioning class for figures*/
+/* Positioning class for figures */
 .float-left {
     float: left;
 }
 
-/*positioning class for figures*/
+/* Positioning class for figures */
 .float-right {
     float: right;
 }
 
-/*figure alignment*/
+/* Figure alignment */
 figure {
     display: flex;
     flex-direction: column;
@@ -42,20 +42,20 @@ figure {
     margin-left: 5%;
 }
 
-/*gives images in main a box shadow*/
+/* Gives images in figures box shadows */
 figure img {
-    box-shadow: 0.2rem 0.2rem 0.3rem #888;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
     border: 1px solid #ccc;
 }
 
-/*font styling for captions*/
+/* Font styling for captions */
 figcaption {
     font-style: italic;
     font-size: 1rem;
     text-align: center;
 }
 
-/*logo flexbox*/
+/* Logo flexbox */
 #logo-flexbox {
     display: flex;
     flex-direction: row;
@@ -68,7 +68,7 @@ figcaption {
     font-size: 2rem;
 }
 
-/*logo size*/
+/* Logo size */
 #logo {
     max-width: 30%;
     height: auto;
@@ -99,7 +99,7 @@ figcaption {
     filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.8));
 }
 
-/*current page underline effect*/
+/* Current page underline effect */
 .navlink.active {
     text-decoration: underline;
     color: white;
@@ -109,12 +109,12 @@ figcaption {
 
 .content {
     background-image: url("/static/images/ernesta-vala-gxt05XHaQ9Q-unsplash.jpg");
-    flex: 1; /* Let the content fill the remaining space */
+    flex: 1; /* Fills remaining space */
     background-color: lightgrey;
     margin-bottom: 1rem;
 }
 
-/* h1 header effects*/
+/* h1 header effects */
 h1 {
     color: black;
     text-align: start;
@@ -132,7 +132,7 @@ h2 {
     font-weight: bold;  
 }
 
-/*main section styling*/
+/* Main section styling */
 main {
     padding: 1rem;
     padding-right: 2rem;
@@ -149,7 +149,7 @@ main {
     width: 100vw;
 }
 
-/*footer styling*/
+/* Footer styling */
 footer {
     border: 1px solid black;
     color: black;
@@ -170,7 +170,7 @@ footer {
     color: black;
 }
 
-/* Footer heart character hover effect*/
+/* Footer heart character hover effect */
 .heart:hover {
     color: red;
 }
@@ -192,7 +192,7 @@ footer {
     cursor: pointer;
 }
 
-/* Footer button link hover effect*/
+/* Footer button link hover effect */
 #top-button:hover {
     background-color: #0056b3;
 }
@@ -211,10 +211,6 @@ footer {
     background-color: #d4edda;
     border-color: #c3e6cb;
     padding-left: 0.5rem;
-}
-
-main p {
-    margin-bottom: 3rem; /* Add space between paragraphs */
 }
 
 .login-form {
@@ -243,12 +239,14 @@ main p {
     padding: 0;
 }
 
+/* Darker background colour for odd items */
 .comments-list li.odd {
-    background-color: #f5f4ef; /* Light background color for odd items */
+    background-color: #f5f4ef; 
 }
 
+/* Lighter background colour for even items */
 .comments-list li.even {
-    background-color: #ffffff; /* Lighter background color for even items */
+    background-color: #fff; 
 }
 
 label {
@@ -289,7 +287,7 @@ input {
     background-color: #0056b3;
 }
 
-/*media controls to enable responsive web design at various screen sizes*/
+/* Media controls to enable responsive web design at various screen sizes */
 @media (max-width: 1130px) {
     * {
         margin: 0;
@@ -317,7 +315,7 @@ input {
     #logo-flexbox {
         justify-content: start;
         flex-direction: column;
-        align-items: center; /* Center align the logo and text */
+        align-items: center; /* Centre align the logo and text */
         margin: 0;
         max-width: 10%;
     }
