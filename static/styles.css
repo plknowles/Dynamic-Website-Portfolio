@@ -7,6 +7,7 @@
 }
 /* Formatting for the whole body */
 body {
+    background-image: url("/static/images/ernesta-vala-gxt05XHaQ9Q-unsplash.jpg");
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -103,10 +104,11 @@ figcaption {
 }
 
 .content {
-    background-image: url("/static/images/ernesta-vala-gxt05XHaQ9Q-unsplash.jpg");
-    background-color: lightgrey;
-    margin-bottom: 1rem;
-    width: 100%;
+    background-color: rgb(231, 231, 231);
+    width: 75%;
+    margin: auto;
+    margin-bottom: 2rem;
+    margin-top: 0;
 }
 
 #header {
@@ -116,7 +118,7 @@ figcaption {
 /* h1 header effects */
 h1 {
     color: black;
-    text-align: start;
+    text-align: center;
     font-size: 3rem;
     margin: 0.5rem;
     margin-left: 1.5rem;
@@ -145,7 +147,6 @@ main {
     padding-right: 3rem;
     justify-content: center;
     font-size: 1.2rem;
-    /* background-color: #f5f4ef; */
     line-height: 200%;
 }
 
@@ -184,7 +185,7 @@ footer {
     display: inline-block;
     background-color: #007BFF;
     color: #fff;
-    padding: 0.3rem 1rem;
+    padding: 0.3rem;
     text-decoration: none;
     border: none;
     border-radius: 0.4rem;
@@ -288,8 +289,6 @@ input {
 }
 
 /* Media controls to enable responsive web design at various screen sizes */
-@media (max-width: 1130px) {
-}
 
 @media (max-width: 900px) {
     h1 {
@@ -309,6 +308,10 @@ input {
     }
     #header {
         margin-top: 5rem;
+    }
+
+    .content {
+        width: 100%;
     }
 }
 
