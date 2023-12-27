@@ -109,7 +109,7 @@ figcaption {
     width: 100%;
 }
 
-header {
+#header {
     margin-top: 6rem;
 }
 
@@ -142,7 +142,7 @@ h3 {
 /* Main section styling */
 main {
     padding: 1rem;
-    padding-right: 2rem;
+    padding-right: 3rem;
     justify-content: center;
     font-size: 1.2rem;
     /* background-color: #f5f4ef; */
@@ -307,8 +307,8 @@ input {
     #references, figcaption {
         font-size: 0.7rem;
     }
-    header {
-        margin-top: 4rem;
+    #header {
+        margin-top: 5rem;
     }
 }
 
@@ -324,10 +324,6 @@ input {
     main, footer, #btn-top, #references, figcaption {
         font-size: 0.6rem;
     }
-    
-    header {
-        margin-top: 3rem;
-    }
 }
 
 @media (max-width: 550px) {
@@ -342,18 +338,10 @@ input {
     h1 {
         font-size: 1rem;
     }
-
-    header {
-        margin-top: 2rem;
-    }
 }
 
 @media (max-width: 440px) {
     .nav-flexbox {
         font-size: 0.5rem;
-    }
-
-    header {
-        margin-top: 1rem;
     }
 }
