@@ -59,28 +59,21 @@ figcaption {
 
 /* Logo */
 #logo {
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
-    align-items: center;
-    margin: 0.5rem;
-    font-weight: bold;
-    color: white;
-    font-size: 2rem;
-    max-width: 5%;
+    max-width: 25%;
+    margin-right: auto;
 }
 
 /* CSS flexbox for navigation bar */
 .nav-flexbox {
     display: flex;
-    background-color: rgb(40, 40, 40);
+    background-color: rgba(40, 40, 40, 0.8);
     font-size: 1.35rem;
     flex-direction: row; /* Stack navigation items horizontally */
     width: 100vw; /* Ensure it spans the full width of the screen */
     position: top;
     align-items: center;
-    justify-content: space-evenly;
-    height: auto;
+    justify-content: right;
+    height: 4rem;
 }
 
 /* Text formatting for nav bar links */
