@@ -9,7 +9,7 @@
 body {
     background-image: url("/static/images/ernesta-vala-gxt05XHaQ9Q-unsplash.jpg");
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 0;
     background-color: lightgrey;
     position: relative;
@@ -77,7 +77,7 @@ figcaption {
     font-size: 1.35rem;
     flex-direction: row; /* Stack navigation items horizontally */
     width: 100vw; /* Ensure it spans the full width of the screen */
-    position: absolute;
+    position: top;
     align-items: center;
     justify-content: space-evenly;
     height: auto;
