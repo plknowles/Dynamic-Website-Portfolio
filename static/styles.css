@@ -104,7 +104,8 @@ figcaption {
 }
 
 .content {
-    background-color: rgb(231, 231, 231);
+    /* background-color: rgb(231, 231, 231); */
+    border: black 1px;
     width: 75%;
     margin: auto;
     margin-bottom: 2rem;
@@ -113,14 +114,14 @@ figcaption {
 }
 
 #header {
-    margin-top: 6rem;
+    margin-top: 1rem;
 }
 
 /* h1 header effects */
 h1 {
     color: black;
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 0.5rem;
     margin-left: 1.5rem;
     font-weight: bold;
@@ -131,7 +132,7 @@ h2 {
     font-size: 2rem;
     margin: 0.8rem;
     margin-left: 0;
-    font-weight: bold;  
+    font-weight: bold;
 }
 
 h3 {
@@ -292,9 +293,13 @@ input {
 
 /* Media controls to enable responsive web design at various screen sizes */
 
-@media (max-width: 900px) {
+@media (max-width: 1025px) {
     h1 {
-        font-size: 2rem;
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
     }
 
     .nav-flexbox {
@@ -308,8 +313,9 @@ input {
     #references, figcaption {
         font-size: 0.7rem;
     }
+
     #header {
-        margin-top: 5rem;
+        margin-top: 1rem;
     }
 
     .content {
@@ -323,7 +329,7 @@ input {
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     main, footer, #btn-top, #references, figcaption {
@@ -341,6 +347,10 @@ input {
     }
 
     h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
         font-size: 1rem;
     }
 }
