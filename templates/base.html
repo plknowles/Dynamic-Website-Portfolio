@@ -29,22 +29,25 @@
       {% endif %}
     </nav>
     <div class = "content">
+      <!-- flash messages -->
+      {% with messages = get_flashed_messages(with_categories = true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class = "alert-{{ category }}" role = "alert">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}      
+      
       <div id = "header">
         <h1>{{ header }}</h1>
       </div>
+      
       <main>
-        <!-- flash messages -->
-        {% with messages = get_flashed_messages(with_categories = true) %}
-          {% if messages %}
-            {% for category, message in messages %}
-                <div class = "alert-{{ category }}" role = "alert">
-                  {{ message }}
-                </div>
-            {% endfor %}
-          {% endif %}
-        {% endwith %}
         {% block main %}
         {% endblock %}
+
         {% block commentsblock %}
         {% endblock %}
       </main>
