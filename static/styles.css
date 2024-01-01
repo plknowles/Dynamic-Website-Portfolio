@@ -11,7 +11,6 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    background-color: lightgrey;
     position: relative;
     min-height: 100vh;
     min-width: 100vw;
@@ -59,28 +58,34 @@ figcaption {
 
 /* Logo */
 #logo {
-    max-width: 25%;
+    margin: 1rem;
+    max-width: 20%;
     margin-right: auto;
 }
 
 /* CSS flexbox for navigation bar */
-.nav-flexbox {
+#nav-flexbox {
     display: flex;
     background-color: rgba(40, 40, 40, 0.8);
     font-size: 1.35rem;
     flex-direction: row; /* Stack navigation items horizontally */
     width: 100vw; /* Ensure it spans the full width of the screen */
-    position: top;
     align-items: center;
     justify-content: right;
     height: 4rem;
+}
+
+#navlink-container {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;   
 }
 
 /* Text formatting for nav bar links */
 .navlink {
     text-decoration: none;
     color: white;
-    margin: 0;
+    margin: auto;
 }
 
 /* Hover effects for nav bar links */
@@ -107,7 +112,7 @@ figcaption {
 }
 
 #header {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 /* h1 header effects */
@@ -209,25 +214,25 @@ footer {
 }
 
 .login-form {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 0.8rem;
     margin: auto;
     margin-top: 0.6rem;
     margin-bottom: 0.6rem;
-    border-radius: 0.4rem;
+    border-radius: 1rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
     width: 25rem;
 }
 
 .comment-form {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 3rem;
     padding-top: 0.2rem;
     padding-bottom: 0.8rem;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    border-radius: 0.4rem;
+    border-radius: 1rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
     width: 100%;
 }
@@ -262,7 +267,7 @@ input {
     color: #fff;
     padding: 0.6rem;
     border: none;
-    border-radius: 0.4rem;
+    border-radius: 1rem;
     cursor: pointer;
     width: 100%;
 }
@@ -276,7 +281,7 @@ input {
     color: #fff;
     padding: 0.6rem;
     border: none;
-    border-radius: 0.4rem;
+    border-radius: 1rem;
     cursor: pointer;
 }
 

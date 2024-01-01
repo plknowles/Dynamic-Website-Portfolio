@@ -10,12 +10,13 @@
     {% endblock %}
   </head>
   <body>
-    <nav class = "nav-flexbox">
+    <nav id = "nav-flexbox">
       <div id = "logo">
         <a href='/'>
           <img  src = "{{ url_for('static', filename='images/logo.png') }}" title = "PK Logo" alt = "PK Logo">
         </a>
       </div>
+      <div id = "navlink-container">
       {% if user.is_authenticated %}
       <a class = "navlink" href = '/'>Home</a>
       <a class = "navlink" href = '/about'>About Me</a>
@@ -27,6 +28,7 @@
       <a class = "navlink" href = "/login">Login</a>
       <a class = "navlink" href = "/signup">Create Account</a>
       {% endif %}
+      </div>
     </nav>
     <div class = "content">
       <!-- flash messages -->
