@@ -63,9 +63,8 @@ def signup():
         user = Users.query.filter_by(email=email).first()
         if user:
             flash("Email already exists", category="form_error")
-
         elif len(email) < 4:
-            flash("Email must be at least 4 characters in length.", category = "form_error")
+            flash("Email must be at least 4 characters in length.", category = "form_error")        
         elif len(name) < 2:
             flash("Name must be at least 2 characters in length.", category = "form_error")
         elif len(password) < 6:
@@ -92,7 +91,7 @@ def signup():
 @login_required
 def logout():
     logout_user()
-    flash("Sucessfully logged out.", category="form_success")
+    flash("You have been successfully logged out", category="form_success")
     return redirect(url_for("blueprints.login"))
 
 @blueprints.route("/search")

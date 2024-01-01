@@ -70,15 +70,14 @@ figcaption {
     flex-direction: row; /* Stack navigation items horizontally */
     width: 100vw; /* Ensure it spans the full width of the screen */
     align-items: center;
-    justify-content: right;
-    height: 4rem;
+    justify-content: space-between;
     border-bottom: 1px solid black;
 }
 
 #navlink-container {
-    width: 50vw;
     display: flex;
-    flex-direction: row;   
+    flex-grow: 1;
+    justify-content: flex-end;  
 }
 
 /* Text formatting for nav bar links */
@@ -299,7 +298,7 @@ input {
         font-size: 1.5rem;
     }
 
-    .nav-flexbox {
+    #nav-flexbox {
         font-size: 1rem;
     }
 
@@ -321,7 +320,7 @@ input {
 }
 
 @media (max-width: 700px) {
-    .nav-flexbox {
+    #nav-flexbox {
         font-size: 0.8rem;
     }
 
@@ -335,7 +334,7 @@ input {
 }
 
 @media (max-width: 550px) {
-    .nav-flexbox {
+    #nav-flexbox {
         font-size: 0.6rem;
     }
 
@@ -353,7 +352,7 @@ input {
 }
 
 @media (max-width: 440px) {
-    .nav-flexbox {
+    #nav-flexbox {
         font-size: 0.5rem;
     }
 }
