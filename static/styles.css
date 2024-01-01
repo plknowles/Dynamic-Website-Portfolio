@@ -15,7 +15,6 @@ body {
     min-height: 100vh;
     min-width: 100vw;
     font-family: 'Open Sans', sans-serif;
-    overflow-x: hidden;
 }
 
 /* Prevents images overflowing on small screens */
@@ -73,6 +72,7 @@ figcaption {
     align-items: center;
     justify-content: right;
     height: 4rem;
+    border-bottom: 1px solid black;
 }
 
 #navlink-container {
@@ -98,7 +98,6 @@ figcaption {
 .navlink.active {
     text-decoration: underline;
     color: white;
-    margin: 0;
 }
 
 .content {
@@ -151,7 +150,7 @@ main {
 
 /* Footer styling */
 footer {
-    border: 1px solid black;
+    border-top: 1px solid black;
     color: black;
     font-size: 1rem;
     display: flex;
