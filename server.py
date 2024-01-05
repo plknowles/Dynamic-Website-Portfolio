@@ -30,4 +30,3 @@ if __name__ == "__main__":
         return Users.query.get(int(id))
     
     app.run(debug=True)
-
