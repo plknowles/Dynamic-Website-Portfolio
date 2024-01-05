@@ -10,11 +10,7 @@ blueprints = Blueprint(__name__, "blueprints")
 
 bcrypt = Bcrypt()
 
-@blueprints.route('/', methods = ["GET", "POST"])
-@login_required
-def home():
-    header = "Welcome to my Portfolio"
-    comments = Comments.query.all()
+def process_comment():
     if request.method == "POST":
         input_comment = request.form.get("comment")
         if len(input_comment) == 0:
@@ -32,6 +28,13 @@ def home():
                 db.session.rollback()
                 print(e)
                 flash("An error occurred. Please try again.", category = "form_error")
+
+@blueprints.route('/', methods = ["GET", "POST"])
+@login_required
+def home():
+    header = "Welcome to my Portfolio"
+    comments = Comments.query.all()
+    process_comment()
     title = "Home"
     return render_template("index.html", title = title, header = header, user = current_user, comments = comments)
 
@@ -94,29 +97,37 @@ def signup():
 @login_required
 def logout():
     logout_user()
-    flash("You have been successfully logged out", category="form_success")
+    flash("You have been successfully logged out", category = "form_success")
     return redirect(url_for("blueprints.login"))
 
 @blueprints.route("/search")
 @login_required
 def search():
+    comments = Comments.query.all()
+    process_comment()
     title = "Site Search"
-    return render_template("search.html", header = title, title = title, user = current_user)
+    return render_template("search.html", header = title, title = title, user = current_user, comments = comments)
 
 @blueprints.route("/about")
 @login_required
 def about():
+    comments = Comments.query.all()
+    process_comment()
     title = "About Me"
-    return render_template("about.html", header = title, title = title, user = current_user)
+    return render_template("about.html", header = title, title = title, user = current_user, comments = comments)
 
 @blueprints.route("/experience")
 @login_required
 def experience():
+    comments = Comments.query.all()
+    process_comment()
     title = "My Experience"
-    return render_template("experience.html", header = title, title = title, user = current_user)
+    return render_template("experience.html", header = title, title = title, user = current_user, comments = comments)
 
 @blueprints.route("/projects")
 @login_required
 def projects():
+    comments = Comments.query.all()
+    process_comment()
     title = "My Projects"
-    return render_template("projects.html", header = title, title = title, user = current_user)
+    return render_template("projects.html", header = title, title = title, user = current_user, comments = comments)
