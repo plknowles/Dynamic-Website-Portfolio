@@ -251,13 +251,15 @@ footer {
 /* Darker background colour for odd items */
 .comments-list div.odd {
     background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 0.5rem;
+    border-radius: 0.4rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Lighter background colour for even items */
 .comments-list div.even {
     background-color: rgba(255, 255, 255, 0);
-    border-radius: 0.5rem;
+    border-radius: 0.4rem;
+    margin-bottom: 0.5rem;
 }
 
 label {
