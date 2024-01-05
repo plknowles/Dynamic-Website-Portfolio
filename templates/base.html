@@ -2,7 +2,7 @@
 <html lang = "en">
   <head>
     <meta charset = "utf-8">
-    <link rel = "icon" href = "{{ url_for('static', filename='images/favicon.png') }}" type = "image/x-icon">
+    <link rel = "icon" href = "{{ url_for('static', filename = 'images/favicon.png') }}" type = "image/x-icon">
     <link rel = "stylesheet" href = "{{ url_for('static', filename='styles.css') }}">
     <meta name = "viewport" content = "width=device-width, initial-scale=1">
     <title>{{ title }} - CMT120 Peter Knowles- </title>
@@ -13,7 +13,7 @@
     <nav id = "nav-flexbox">
       <div id = "logo">
         <a href='/'>
-          <img  src = "{{ url_for('static', filename='images/logo.png') }}" title = "PK Logo" alt = "PK Logo">
+          <img  src = "{{ url_for('static', filename = 'images/logo.png') }}" title = "PK Logo" alt = "PK Logo">
         </a>
       </div>
       <div id = "navlink-container">
@@ -60,6 +60,6 @@
       </span>
       <a id = "top-button" href = "#top"><strong>Return to top</strong></a>
     </footer>
-    <script src = "{{ url_for('static', filename='underlineActiveLinks.js') }}"></script>
+    <script src = "{{ url_for('static', filename = 'underlineActiveLinks.js') }}"></script>
   </body>
 </html>
