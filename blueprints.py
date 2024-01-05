@@ -4,6 +4,7 @@ from flask_bcrypt import Bcrypt
 from models import Users, Comments
 from database import db
 from flask_login import login_user, login_required, logout_user, current_user
+from better_profanity import profanity
 
 blueprints = Blueprint(__name__, "blueprints")
 
@@ -18,6 +19,8 @@ def home():
         input_comment = request.form.get("comment")
         if len(input_comment) == 0:
             flash("Comment cannot be empty", category = "form_error")
+        elif profanity.contains_profanity(input_comment):
+            flash("Comment contains profanity and cannot be posted", category = "form_error")
         else:
             new_comment = Comments(text = input_comment, name = current_user.name)
             db.session.add(new_comment)

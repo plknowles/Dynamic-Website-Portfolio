@@ -4,6 +4,7 @@ from os import path
 from database import db
 from config import Config
 from flask_login import LoginManager
+from better_profanity import profanity
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -17,6 +18,7 @@ if __name__ == "__main__":
     with app.app_context():
         if not path.exists("database.db"):
             db.create_all()
+    profanity.load_censor_words()
     
     login_manager = LoginManager()
     login_manager.login_view = "blueprints.login"
