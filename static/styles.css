@@ -172,10 +172,6 @@ footer {
     color: red;
 }
 
-.comment-textarea {
-    width: 100%;
-}
-
 /* Footer button link to return to the top of the page */
 #top-button {
     display: inline-block;
@@ -294,6 +290,7 @@ input {
     border: none;
     border-radius: 1rem;
     cursor: pointer;
+    width: auto;
 }
 
 .comment-form-button:hover {

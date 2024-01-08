@@ -5,6 +5,7 @@ from database import db
 from config import Config
 from flask_login import LoginManager
 from better_profanity import profanity
+from flask_wtf.csrf import CSRFProtect
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -14,11 +15,12 @@ app.register_blueprint(blueprints, url_prefix='/')
 
 from models import Users, Comments
 
-if __name__ == "__main__":
+if __name__ == "__main__":        
     with app.app_context():
         if not path.exists("database.db"):
             db.create_all()
     profanity.load_censor_words()
+    csrf = CSRFProtect(app)
     
     login_manager = LoginManager()
     login_manager.login_view = "blueprints.login"
@@ -27,6 +29,6 @@ if __name__ == "__main__":
 
     @login_manager.user_loader
     def load_user(id):
-        return Users.query.get(int(id))
+        return db.session.get(Users, int(id))
     
     app.run(debug=True)

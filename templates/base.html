@@ -31,17 +31,6 @@
       </div>
     </nav>
     <div class = "content">
-      <!-- flash messages -->
-      {% with messages = get_flashed_messages(with_categories = true) %}
-        {% if messages %}
-          {% for category, message in messages %}
-            <div class = "alert-{{ category }}" role = "alert">
-              {{ message }}
-            </div>
-          {% endfor %}
-        {% endif %}
-      {% endwith %}      
-      
       <div id = "header">
         <h1>{{ header }}</h1>
       </div>
@@ -53,6 +42,20 @@
         {% if user.is_authenticated %}
           {% block commentsblock %}
             <form class = "comment-form" method = "POST">
+                <!-- flash messages -->
+                {% with messages = get_flashed_messages(with_categories = true) %}
+                  {% if messages %}
+                    {% for category, message in messages %}
+                      <div class = "alert-{{ category }}" role = "alert">
+                        {{ message }}
+                      </div>
+                    {% endfor %}
+                  {% endif %}
+                {% endwith %}
+
+              {{ form.csrf_token }}
+              {{ form.hidden_tag() }}
+
               <h2>Comments</h2>
             
               <ul class = "comments-list">
@@ -65,19 +68,16 @@
                   {% endfor %}
               </ul>
             
-              <h3>Leave a new comment</h3>
-            
-              <textarea rows = "4" class = "comment-textarea" name = "comment" placeholder = "Enter new comment here"></textarea>
-              <div>
-                <button type = "submit" class = "comment-form-button">Add Comment</button>
-              </div>
+              <h3>{{ form.comment.label }}</h3>
+              {{ form.comment }}
+              {{ form.submit() }}
             </form>
           {% endblock %}
         {% endif %}
       </main>
     </div>
     <footer>
-      <span id="footer-text">
+      <span id = "footer-text">
       Made with<span class = "heart">&#160;&#10084;&#160;</span>by Peter Knowles - December 2023 - Contact:&#160;<a href = "mailto:knowlesp2@cardiff.ac.uk">knowlesp2@cardiff.ac.uk</a>
       </span>
       <a id = "top-button" href = "#top"><strong>Return to top</strong></a>
