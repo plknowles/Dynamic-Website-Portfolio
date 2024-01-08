@@ -11,7 +11,7 @@ app = Flask(__name__)
 app.config.from_object(Config)
 db.init_app(app)
 
-app.register_blueprint(blueprints, url_prefix='/')
+app.register_blueprint(blueprints, url_prefix = '/')
 
 from models import Users, Comments
 
@@ -31,4 +31,4 @@ if __name__ == "__main__":
     def load_user(id):
         return db.session.get(Users, int(id))
     
-    app.run(debug=True)
+    app.run(debug = True)
