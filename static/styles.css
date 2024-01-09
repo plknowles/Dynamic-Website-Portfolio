@@ -1,11 +1,12 @@
 /*import open sans font */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
 * {
     box-sizing: border-box;
     outline: 0;
 }
+
 /* Formatting for the whole body */
 body {
     background-image: url("/static/images/ernesta-vala-gxt05XHaQ9Q-unsplash.jpg");
@@ -15,7 +16,7 @@ body {
     position: relative;
     min-height: 100vh;
     min-width: 100vw;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Prevents images overflowing on small screens */
@@ -56,7 +57,6 @@ figcaption {
     text-align: center;
 }
 
-/* Logo */
 #logo {
     margin: 1rem;
     max-width: 20%;
