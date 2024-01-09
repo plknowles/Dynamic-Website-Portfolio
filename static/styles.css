@@ -117,9 +117,10 @@ figcaption {
 
 /* h1 header effects */
 h1 {
+    font-family: 'Amatic SC', sans-serif;
     color: black;
     text-align: center;
-    font-size: 4rem;
+    font-size: 6rem;
     margin: 0.5rem;
     margin-left: 1.5rem;
     font-weight: bold;
@@ -205,7 +206,7 @@ footer {
 }
 
 /* Error alert style */
-.alert-form_error {
+.alert-form_error, .alert-message {
     font-weight: bold;
     margin: auto;
     margin-top: 1rem;
