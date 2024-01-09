@@ -31,4 +31,4 @@ if __name__ == "__main__":
     def load_user(id):
         return db.session.get(Users, int(id))
     
-    app.run(debug = True)
+    # app.run(debug = True)
