@@ -31,7 +31,7 @@ def process_comment(form):
                 db.session.commit()
                 flash("Comment added successfully!", category = "form_success")
                 form.comment.data = ""
-                redirect(url_for("blueprints.home"))
+                redirect(url_for(request.endpoint))
             except Exception as e:
                 db.session.rollback()
                 print(e)
