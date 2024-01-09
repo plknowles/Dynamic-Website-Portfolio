@@ -1,5 +1,5 @@
 /*import open sans font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
 * {
@@ -16,7 +16,7 @@ body {
     position: relative;
     min-height: 100vh;
     min-width: 100vw;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Prevents images overflowing on small screens */
@@ -152,8 +152,8 @@ main {
 article {
     background-color: rgba(255, 255, 255, 0.5);
     padding: 3rem;
-    padding-top: 0.2rem;
-    padding-bottom: 0.8rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -235,8 +235,8 @@ footer {
     background-color: rgba(255, 255, 255, 0.5);
     padding: 0.8rem;
     margin: auto;
-    margin-top: 0.6rem;
-    margin-bottom: 0.6rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     border-radius: 1rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
     width: 25rem;
@@ -245,8 +245,8 @@ footer {
 .comment-form {
     background-color: rgba(255, 255, 255, 0.5);
     padding: 3rem;
-    padding-top: 0.2rem;
-    padding-bottom: 0.8rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;

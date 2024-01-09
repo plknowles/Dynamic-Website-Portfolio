@@ -48,7 +48,7 @@
         {% block main %}
         {% endblock %}
 
-        {% if user.is_authenticated %}
+        {% if user.is_authenticated and request.endpoint not in ['blueprints.login', 'blueprints.signup'] %}
           {% block commentsblock %}
             <form class = "comment-form" method = "POST">
               {{ form.csrf_token }}

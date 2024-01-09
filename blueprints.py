@@ -119,7 +119,7 @@ def logout():
     flash("You have been successfully logged out", category = "form_success")
     return redirect(url_for("blueprints.login"))
 
-@blueprints.route("/about")
+@blueprints.route("/about", methods = ["GET", "POST"])
 @login_required
 def about():
     form = comments_form()
@@ -131,7 +131,7 @@ def about():
     title = "About Me"
     return render_template("about.html", header = title, title = title, user = current_user, comments = comments, form = form)
 
-@blueprints.route("/experience")
+@blueprints.route("/experience", methods = ["GET", "POST"])
 @login_required
 def experience():
     form = comments_form()
@@ -143,7 +143,7 @@ def experience():
     title = "My Experience"
     return render_template("experience.html", header = title, title = title, user = current_user, comments = comments, form = form)
 
-@blueprints.route("/projects")
+@blueprints.route("/projects", methods = ["GET", "POST"])
 @login_required
 def projects():
     form = comments_form()
