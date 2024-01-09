@@ -119,18 +119,6 @@ def logout():
     flash("You have been successfully logged out", category = "form_success")
     return redirect(url_for("blueprints.login"))
 
-@blueprints.route("/search")
-@login_required
-def search():
-    form = comments_form()
-    if form.validate_on_submit():
-        process_comment(form)
-    else:
-        flash_errors(form)
-    comments = Comments.query.all()
-    title = "Site Search"
-    return render_template("search.html", header = title, title = title, user = current_user, comments = comments, form = form)
-
 @blueprints.route("/about")
 @login_required
 def about():

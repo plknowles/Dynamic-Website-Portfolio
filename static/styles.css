@@ -1,5 +1,6 @@
 /*import open sans font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -66,12 +67,13 @@ figcaption {
 #nav-flexbox {
     display: flex;
     background-color: rgba(40, 40, 40, 0.8);
-    font-size: 1.35rem;
+    font-size: 2rem;
     flex-direction: row; /* Stack navigation items horizontally */
     width: 100vw; /* Ensure it spans the full width of the screen */
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid black;
+    font-family: 'Amatic SC', sans-serif;
 }
 
 #navlink-container {
@@ -146,6 +148,19 @@ main {
     line-height: 200%;
 }
 
+article {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 3rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.8rem;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
 /* Footer styling */
 footer {
     border-top: 1px solid black;
@@ -154,12 +169,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f5f5f5;
     padding: 0.2rem;
     width: 100vw;
     position: absolute;
     bottom: 0;
-    background-color: lightgrey;
+    background-color: rgba(211, 211, 211, 0.70);
 }
 
 /* Footer heart character that changes colour on hover */
@@ -309,7 +323,7 @@ input {
     }
 
     #nav-flexbox {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     main, footer, #btn-top, .alert-form_error, .alert-form_success {

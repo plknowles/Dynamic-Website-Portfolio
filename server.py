@@ -34,3 +34,6 @@ with server.app_context():
     login_manager.login_view = "blueprints.login"
     login_manager.session_protection = "strong"
     login_manager.init_app(server)
+
+if __name__ == "__main__":
+    server.run(debug = True)
