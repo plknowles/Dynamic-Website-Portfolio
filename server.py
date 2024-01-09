@@ -7,28 +7,28 @@ from flask_login import LoginManager
 from better_profanity import profanity
 from flask_wtf.csrf import CSRFProtect
 
-app = Flask(__name__)
-app.config.from_object(Config)
-db.init_app(app)
-login_manager = LoginManager(app)
+server = Flask(__name__)
+server.config.from_object(Config)
+db.init_app(server)
+login_manager = LoginManager(server)
 
 @login_manager.user_loader
 def load_user(id):
     return db.session.get(Users, int(id))
 
-app.register_blueprint(blueprints, url_prefix = '/')
+server.register_blueprint(blueprints, url_prefix = '/')
 
 from models import Users, Comments
 
-if __name__ == "__main__":        
-    with app.app_context():
+if __name__ == "__main__":  
+    with server.app_context():
         if not path.exists("database.db"):
             db.create_all()
     profanity.load_censor_words()
-    csrf = CSRFProtect(app)
+    csrf = CSRFProtect(server)
     
     login_manager.login_view = "blueprints.login"
     login_manager.session_protection = "strong"
-    login_manager.init_app(app)
+    login_manager.init_app(server)
     
-    # app.run(debug = True)
+    # server.run(debug = True)
