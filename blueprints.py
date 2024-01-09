@@ -25,7 +25,7 @@ def process_comment(form):
         if profanity.contains_profanity(form.comment.data):
             flash("Comment contains profanity and cannot be posted", category = "form_error")
         else:
-            new_comment = Comments(text = form.comment.data, name = current_user.name)
+            new_comment = Comments(text = form.comment.data, user_name = current_user.name)
             db.session.add(new_comment)
             try:
                 db.session.commit()

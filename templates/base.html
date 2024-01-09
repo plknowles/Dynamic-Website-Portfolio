@@ -60,7 +60,7 @@
               <ul class = "comments-list">
                   {% for comment in comments %}
                   <div class="{{ 'even' if loop.index is even else 'odd' }}">
-                      <strong>{{ comment.name }}</strong> - {{ comment.date.strftime('%d %B %Y') }} &nbsp; {{ comment.date.strftime('%H:%M') }}
+                      <strong>{{ comment.user_name }}</strong> - {{ comment.date.strftime('%d %B %Y') }} &nbsp; {{ comment.date.strftime('%H:%M') }}
                       <br>
                       {{ comment.text }}
                   </div>

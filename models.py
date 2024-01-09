@@ -16,4 +16,5 @@ class Comments(db.Model):
     id = db.Column(db.Integer, primary_key = True, nullable = False)
     text = db.Column(db.String(10000), nullable = False)
     date = db.Column(db.DateTime(timezone = True), default = datetime.now)
-    name = db.Column(db.Integer, db.ForeignKey("users.name"))
+    user_name = db.Column(db.String(150), db.ForeignKey("users.name"))
+    user = db.relationship("Users", backref = "comments")
