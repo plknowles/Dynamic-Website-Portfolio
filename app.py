@@ -10,6 +10,11 @@ from flask_wtf.csrf import CSRFProtect
 app = Flask(__name__)
 app.config.from_object(Config)
 db.init_app(app)
+login_manager = LoginManager(app)
+
+@login_manager.user_loader
+def load_user(id):
+    return db.session.get(Users, int(id))
 
 app.register_blueprint(blueprints, url_prefix = '/')
 
@@ -22,13 +27,8 @@ if __name__ == "__main__":
     profanity.load_censor_words()
     csrf = CSRFProtect(app)
     
-    login_manager = LoginManager()
     login_manager.login_view = "blueprints.login"
     login_manager.session_protection = "strong"
     login_manager.init_app(app)
-
-    @login_manager.user_loader
-    def load_user(id):
-        return db.session.get(Users, int(id))
     
     # app.run(debug = True)
