@@ -17,7 +17,7 @@ login_manager = LoginManager(server)
 def load_user(id):
     return db.session.get(Users, int(id))
 
-server.register_blueprint(blueprints, url_prefix='/')
+server.register_blueprint(blueprints, url_prefix = '/')
 
 with server.app_context():
     if not path.exists("database.db"):
