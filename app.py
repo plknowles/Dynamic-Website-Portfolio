@@ -2,7 +2,7 @@ from flask import Flask
 from blueprints import blueprints
 from os import path
 from database import db
-from config.py import Config
+from config import Config
 from flask_login import LoginManager
 from better_profanity import profanity
 from flask_wtf.csrf import CSRFProtect
