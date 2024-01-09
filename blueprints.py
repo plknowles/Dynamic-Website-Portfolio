@@ -47,7 +47,7 @@ def flash_errors(form):
 @login_required
 def home():
     form = comments_form()
-    header = "Welcome to my Portfolio"
+    header = "Hi, I'm Peter &#128075"
     if form.validate_on_submit():
         process_comment(form)
     else:

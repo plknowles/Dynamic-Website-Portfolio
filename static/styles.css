@@ -1,6 +1,6 @@
 /*import open sans font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
 * {
     box-sizing: border-box;
@@ -73,13 +73,13 @@ figcaption {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid black;
-    font-family: 'Amatic SC', sans-serif;
+    font-family: 'Courier Prime', monospace;
 }
 
 #navlink-container {
     display: flex;
     flex-grow: 1;
-    justify-content: flex-end;  
+    justify-content: flex-end;
 }
 
 /* Text formatting for nav bar links */
@@ -117,7 +117,7 @@ figcaption {
 
 /* h1 header effects */
 h1 {
-    font-family: 'Amatic SC', sans-serif;
+    font-family: 'Courier Prime', monospace;
     color: black;
     text-align: center;
     font-size: 6rem;
@@ -127,6 +127,7 @@ h1 {
 }
 
 h2 {
+    font-family: 'Courier Prime', monospace;
     color: black;
     font-size: 2rem;
     margin: 0.8rem;
@@ -155,7 +156,6 @@ article {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     margin: auto;
-    margin-top: 2rem;
     margin-bottom: 2rem;
     border-radius: 1rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
