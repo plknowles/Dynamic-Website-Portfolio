@@ -15,6 +15,10 @@ class Users(db.Model, UserMixin):
 class Comments(db.Model):
     id = db.Column(db.Integer, primary_key = True, nullable = False)
     text = db.Column(db.String(10000), nullable = False)
-    date = db.Column(db.DateTime(timezone = True), default = datetime.now)
-    user_name = db.Column(db.String(150), db.ForeignKey("users.name"))
-    user = db.relationship("Users", backref = "comments")
+    date = db.Column(db.DateTime(timezone = True), default = datetime.now, nullable = False)
+
+    user_name = db.Column(db.String(150), db.ForeignKey("users.name"), nullable = False)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable = False)
+
+    # Define the relationship with the Users table
+    user = db.relationship("Users", backref = "comments", foreign_keys = [user_id])
