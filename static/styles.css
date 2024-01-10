@@ -67,7 +67,7 @@ figcaption {
 #nav-flexbox {
     display: flex;
     background-color: rgba(40, 40, 40, 0.8);
-    font-size: 2rem;
+    font-size: 1.6rem;
     flex-direction: row; /* Stack navigation items horizontally */
     width: 100vw; /* Ensure it spans the full width of the screen */
     align-items: center;
@@ -102,7 +102,6 @@ figcaption {
 }
 
 .content {
-    /* background-color: rgb(231, 231, 231); */
     border: black 1px;
     width: 75%;
     margin: auto;
@@ -111,19 +110,42 @@ figcaption {
     position: relative;
 }
 
+/* header and animations */
 #header {
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
     margin-top: 1rem;
+    animation:
+        typing 3s,
+        cursor .4s step-end infinite alternate;
+}
+
+/* cursor animation */
+@keyframes cursor {
+    50% {border-color: transparent}
+}
+
+/* typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 /* h1 header effects */
 h1 {
     font-family: 'Courier Prime', monospace;
     color: black;
-    text-align: center;
     font-size: 6rem;
     margin: 0.5rem;
-    margin-left: 1.5rem;
-    font-weight: bold;
 }
 
 h2 {
@@ -324,7 +346,7 @@ input {
     }
 
     #nav-flexbox {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     main, footer, #btn-top, .alert-form_error, .alert-form_success {
@@ -346,7 +368,7 @@ input {
 
 @media (max-width: 700px) {
     #nav-flexbox {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     h1 {
