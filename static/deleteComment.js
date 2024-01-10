@@ -5,7 +5,7 @@ function deleteComment(commentId) {
     // Pop up a confirm message
     if (confirm("Are you sure you want to delete this comment?")) {
         // Uses the Fetch API to send a DELETE request to the server
-        fetch(`/delete_comment/${commentId}`, {
+        fetch(`/comments/${commentId}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
