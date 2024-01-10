@@ -30,4 +30,6 @@ Code:
 
 - FlaskWTF: WTFORMS/Flask-WTF: Simple integration of flask and WTFORMS, including CSRF, file upload and recaptcha integration., GitHub. Available at: https://github.com/wtforms/flask-wtf (Accessed: 10 January 2024).
 
-- Gunicorn WSGI UNIX server: BENOITC/Gunicorn: Gunicorn ‘Green unicorn’ is a WSGI HTTP server for UNIX, fast clients and sleepy applications., GitHub. Available at: https://github.com/benoitc/gunicorn
+- Gunicorn WSGI UNIX server: BENOITC/Gunicorn: Gunicorn ‘Green unicorn’ is a WSGI HTTP server for UNIX, fast clients and sleepy applications., GitHub. Available at: https://github.com/benoitc/gunicorn (Accessed: 10 January 2024).
+
+- Jinja2 Templating: Pallets/Jinja: A very fast and expressive template engine., GitHub. Available at: https://github.com/pallets/jinja (Accessed: 10 January 2024).
