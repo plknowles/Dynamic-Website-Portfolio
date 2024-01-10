@@ -156,14 +156,15 @@ h2 {
     font-family: 'Courier Prime', monospace;
     color: black;
     font-size: 2rem;
-    margin: 0.8rem;
+    margin: 1rem;
     margin-left: 0;
     font-weight: bold;
 }
 
 h3 {
+    font-family: 'Courier Prime', monospace;
     color: black;
-    font-size: 1rem;
+    font-size: 1.4rem;
     margin: 0.4rem;
     margin-left: 0;
     font-weight: bold;  
@@ -178,14 +179,21 @@ main {
 
 article {
     background-color: rgba(255, 255, 255, 0.5);
-    padding: 3rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     margin: auto;
     margin-bottom: 2rem;
     border-radius: 1rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
     width: 100%;
+}
+
+/* Add a clearfix class to the article to contain floated elements */
+article:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* Footer styling */
@@ -271,8 +279,8 @@ footer {
 .comment-form {
     background-color: rgba(255, 255, 255, 0.5);
     padding: 3rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
