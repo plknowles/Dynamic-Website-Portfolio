@@ -3,11 +3,19 @@
 {% block main %}
 <article>
     <h2>My background</h2>
-    <p>I was born in Hong Kong, and have grown up living all around the world, including the UK, Taiwan, and China. I was always interested in programming and technology as a child; I’d find ways of jailbreaking into phones and consoles, set up a halo gaming LAN in the school computer room and hosted my own website at 11. I didn’t initially go down the route of computing: my bachelor’s degree was in biomedical science and following that, I worked in operations management for two years at Amazon.</p>
-    <p>Starting in 2023, I decided to pursue a career in software development, starting an MSc in Computing at Cardiff University. The programme is a conversion course and is hence fast paced and challenging. I’ve had the opportunity to learn multiple languages such as SQL, JavaScript, python, HTML and CSS. I’ve also been dabbling with Java in my free time, creating a couple of GUI programs. I created this portfolio as part of a university coursework; however, I intend build on it further and use it to showcase all the projects I undertake in the following months and years. I’m at the beginning of my programming journey and working towards becoming a full stack developer, so I do expect there will be much more to come!</p>
+    <figure id = "me-fig" class = "float-right">
+        <img src = "{{ url_for('static', filename = 'images/me.jpg') }}" alt = "me" title = "me">
+        <figcaption>That's what I look like!</figcaption>
+    </figure>
+    <p>I was born in Hong Kong, and grew up living around the world, including the UK, Taiwan, and China. I was always interested in programming and technology as a child; I’d find ways of jailbreaking into phones and consoles, set up a halo gaming LAN in the school computer room and hosted my own website at 11. I didn’t initially go down the route of computing: my bachelor’s degree was in biomedical science and following that, I worked in operations management for two years at Amazon.</p>
+    <p>Starting in 2023, I decided to pursue a career in software development, starting an MSc in Computing at Cardiff University. The programme is a conversion course and hence fast-paced and challenging. I’ve had the opportunity to learn multiple languages such as SQL, JavaScript, python, HTML and CSS. I’ve also been dabbling with Java in my free time, creating a couple of GUI programs. I created this portfolio as part of a university coursework; however, I intend build on it further and use it to showcase all the projects I undertake in the following months and years. I’m at the beginning of my programming journey and working towards becoming a full stack developer, so I do expect there will be much more to come!</p>
     
     <h2>Personal and hobbies</h2>
-    <p></p>
-
+    <figure id = "climbing-fig" class = "float-left">
+        <img src = "{{ url_for('static', filename = 'images/climbing.jpg') }}" alt = "climbing" title = "climbing">
+        <figcaption>Me doing some climbing!</figcaption>
+    </figure>
+    <p>I’m a friendly, open-minded person. I love travelling and enjoy trying a variety of new experiences – the more exciting it is, the more likely I’ll want to try it. I value my fitness and in my free time I regularly train indoor bouldering, calisthenics, and I’ll go on the occasional long hike. I’m interested in martial arts – particularly boxing, BJJ, and MMA; I train boxing a few times a week and regularly watch MMA and boxing events.</p>
+    <p>Outside of fitness, I do a lot of coding in my free time for fun. I like to do some casual photography on the side, and I can play two instruments, the violin and the piano. Finally, I can also ride a motorcycle and have a pilot’s licence!</p>
 </article>
 {% endblock %}
