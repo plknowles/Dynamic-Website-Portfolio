@@ -37,13 +37,15 @@ def process_comment(form):
             try:
                 db.session.commit()
                 flash("Comment added successfully!", category = "form_success")
-                form.comment.data = ""
-                redirect(url_for(request.endpoint))
+                # clears the comment entry data if submitted and returns True
+                form.comment.data = None
+                return True
             except Exception as e:
                 db.session.rollback()
                 print(e)
                 flash("An error occurred. Please try again.", category = "form_error")
-    form.comment.data = ""
+        # returns false if comment not submitted
+        return False
 
 # Flash form errors/successes at the top of the page
 def flash_errors(form):
@@ -52,14 +54,16 @@ def flash_errors(form):
             flash(f"{error}", category = "form_error")
 
 @blueprints.route('/', methods = ["GET", "POST"])
-@login_required # decorator is part of Flask-Login extension and allows access is user is authenticated
+@login_required # decorator is part of Flask-Login extension and allows access only if user is authenticated
 def home():
     form = comments_form()
     header = "Hi, I'm Peter &#128075"
     if form.validate_on_submit():
-        process_comment(form)
-    else:
-        flash_errors(form)
+        if process_comment(form):
+            # reloads current page if comment submitted
+            return redirect(request.url)
+        else:
+            flash_errors(form)
     comments = Comments.query.all()
     title = "Home"
     return render_template("index.html", title = title, header = header, user = current_user, comments = comments, form = form)
