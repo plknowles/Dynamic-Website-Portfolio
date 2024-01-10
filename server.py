@@ -25,6 +25,7 @@ with server.app_context():
 
     profanity.load_censor_words()
     csrf = CSRFProtect(server)
+    csrf.init_app(server)
 
     login_manager.login_view = "blueprints.login"
     login_manager.session_protection = "strong"
