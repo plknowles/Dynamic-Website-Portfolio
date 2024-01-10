@@ -105,6 +105,7 @@ figcaption {
     color: white;
 }
 
+/* container of page content */
 .content {
     border: black 1px;
     width: 75%;
@@ -115,7 +116,7 @@ figcaption {
 }
 
 /* header and animations */
-#header {
+#header { /* Header typing effect: CSS typing effect - codepen. Available at: https://codepen.io/denic/pen/GRoOxbM (Accessed: 10 January 2024). */ 
     font-weight: bold;
     text-align: center;
     display: inline-block;
@@ -144,7 +145,7 @@ figcaption {
     }
 }
 
-/* h1 header effects */
+/* header styling */
 h1 {
     font-family: 'Courier Prime', monospace;
     color: black;
@@ -239,7 +240,7 @@ footer {
     background-color: #0056b3;
 }
 
-/* Error alert style */
+/* Red error flash alert style */
 .alert-form_error, .alert-message {
     font-weight: bold;
     margin: auto;
@@ -252,7 +253,7 @@ footer {
     padding: 1rem;
 }
   
-/* Success alert style */
+/* Green success flash alert style */
 .alert-form_success {
     font-weight: bold;
     margin: auto;

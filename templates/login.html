@@ -2,6 +2,7 @@
 
 {% block main %}
 <form class = "login-form" action = "/login" method = "post">
+    <!-- Ensures form is protected against CSRF attacks using Flask-WTF -->
     {{ form.csrf_token }}
     <label for = "email">Email:</label>
     <input type = "email" id = "email" name = "email" placeholder = "Enter email" autocomplete = "email" required>
