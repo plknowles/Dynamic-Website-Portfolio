@@ -30,5 +30,5 @@ with server.app_context():
     login_manager.session_protection = "strong"
     login_manager.init_app(server)
 
-if __name__ == "__main__":
-    server.run(debug = True)
+# if __name__ == "__main__":
+#     server.run(debug = True)
