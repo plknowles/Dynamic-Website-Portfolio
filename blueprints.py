@@ -43,6 +43,8 @@ def flash_errors(form):
         for error in field.errors:
             flash(f"{error}", category = "form_error")
 
+
+
 @blueprints.route('/', methods = ["GET", "POST"])
 @login_required
 def home():
@@ -154,3 +156,22 @@ def projects():
     comments = Comments.query.all()
     title = "My Projects"
     return render_template("projects.html", header = title, title = title, user = current_user, comments = comments, form = form)
+
+@blueprints.route("/delete_comment/<int:comment_id>", methods=["DELETE"])
+@login_required
+def delete_comment(comment_id):
+    try:
+        comment = Comments.query.get(comment_id)
+
+        if current_user.id != comment.user_id:
+            flash("You do not have permission to delete this comment.", category = "form_error")
+            return redirect(url_for(request.endpoint))
+
+        db.session.delete(comment)
+        db.session.commit()
+        flash("Comment deleted successfully.", category="form_success")
+        return "Comment deleted successfully", 200
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        flash("An error occurred while deleting the comment.", category = "form_error")
+        return "An error occurred while deleting the comment", 500

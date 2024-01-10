@@ -60,11 +60,16 @@
             
               <ul class = "comments-list">
                   {% for comment in comments %}
-                  <div class="{{ 'even' if loop.index is even else 'odd' }}">
-                      <strong>{{ comment.user_name }}</strong> - {{ comment.date.strftime('%d %B %Y') }} &nbsp; {{ comment.date.strftime('%H:%M') }}
-                      <br>
-                      {{ comment.text }}
-                  </div>
+                    <div class="{{ 'even' if loop.index is even else 'odd' }}">
+                        <strong>{{ comment.user_name }}</strong> - {{ comment.date.strftime('%d %B %Y') }} &nbsp; {{ comment.date.strftime('%H:%M') }} &nbsp;  &nbsp; 
+                        
+                        {% if current_user.is_authenticated and current_user.id == comment.user_id %}
+                          <button class = "delete-comment-button" onclick = "deleteComment({{ comment.id }})">Delete comment</button>
+                        {% endif %}
+
+                        <br>
+                        {{ comment.text }}
+                    </div>
                   {% endfor %}
               </ul>
             
@@ -85,5 +90,7 @@
     </footer>
 
     <script src = "{{ url_for('static', filename = 'underlineActiveLinks.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'deleteComment.js') }}"></script>
+
   </body>
 </html>
