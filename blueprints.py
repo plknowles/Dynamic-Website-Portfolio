@@ -43,8 +43,6 @@ def flash_errors(form):
         for error in field.errors:
             flash(f"{error}", category = "form_error")
 
-
-
 @blueprints.route('/', methods = ["GET", "POST"])
 @login_required
 def home():
@@ -111,8 +109,8 @@ def signup():
                 print(e)
                 flash("An error occurred during account creation. Please try again.", category = "form_error")
 
-    title = "Create Account"
-    return render_template("signup.html", header = "Create New User Account", title = title, user = current_user, form = form)
+    title = "Create New Account"
+    return render_template("signup.html", header = "Create New Account", title = title, user = current_user, form = form)
 
 @blueprints.route("/logout")
 @login_required
