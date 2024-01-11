@@ -1,6 +1,6 @@
 /*import open sans font */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
 
 * {
     box-sizing: border-box;
@@ -16,7 +16,7 @@ body {
     position: relative;
     min-height: 100vh;
     min-width: 100vw;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 /* Prevents images overflowing on small screens */
@@ -77,7 +77,7 @@ figcaption {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid black;
-    font-family: 'Courier Prime', monospace;
+    font-family: "Courier Prime", monospace;
 }
 
 #navlink-container {
@@ -116,7 +116,8 @@ figcaption {
 }
 
 /* header and animations */
-#header { /* Header typing effect: CSS typing effect - codepen. Available at: https://codepen.io/denic/pen/GRoOxbM (Accessed: 10 January 2024). */ 
+#header {
+    /* Header typing effect: CSS typing effect - codepen. Available at: https://codepen.io/denic/pen/GRoOxbM (Accessed: 10 January 2024). */
     font-weight: bold;
     text-align: center;
     display: inline-block;
@@ -125,14 +126,14 @@ figcaption {
     white-space: nowrap;
     overflow: hidden;
     margin-top: 1rem;
-    animation:
-        typing 4s,
-        cursor .4s step-end infinite alternate;
+    animation: typing 4s, cursor 0.4s step-end infinite alternate;
 }
 
 /* cursor animation */
 @keyframes cursor {
-    50% {border-color: transparent}
+    50% {
+        border-color: transparent;
+    }
 }
 
 /* typing animation */
@@ -147,14 +148,14 @@ figcaption {
 
 /* header styling */
 h1 {
-    font-family: 'Courier Prime', monospace;
+    font-family: "Courier Prime", monospace;
     color: black;
     font-size: 6rem;
     margin: 0.5rem;
 }
 
 h2 {
-    font-family: 'Courier Prime', monospace;
+    font-family: "Courier Prime", monospace;
     color: black;
     font-size: 2rem;
     margin: 1rem;
@@ -163,12 +164,12 @@ h2 {
 }
 
 h3 {
-    font-family: 'Courier Prime', monospace;
+    font-family: "Courier Prime", monospace;
     color: black;
     font-size: 1.4rem;
     margin: 0.4rem;
     margin-left: 0;
-    font-weight: bold;  
+    font-weight: bold;
 }
 
 /* Main section styling */
@@ -209,7 +210,7 @@ footer {
     width: 100vw;
     position: absolute;
     bottom: 0;
-    background-color: rgba(211, 211, 211, 0.70);
+    background-color: rgba(211, 211, 211, 0.7);
 }
 
 /* Footer heart character that changes colour on hover */
@@ -225,7 +226,7 @@ footer {
 /* Footer button link to return to the top of the page */
 #top-button {
     display: inline-block;
-    background-color: #007BFF;
+    background-color: #007bff;
     color: #fff;
     padding: 0.3rem;
     text-decoration: none;
@@ -241,7 +242,8 @@ footer {
 }
 
 /* Red error flash alert style */
-.alert-form_error, .alert-message {
+.alert-form_error,
+.alert-message {
     font-weight: bold;
     margin: auto;
     margin-top: 1rem;
@@ -252,7 +254,7 @@ footer {
     border: 2px solid red;
     padding: 1rem;
 }
-  
+
 /* Green success flash alert style */
 .alert-form_success {
     font-weight: bold;
@@ -322,7 +324,7 @@ input {
 }
 
 .login-form-button {
-    background-color: #007BFF;
+    background-color: #007bff;
     color: #fff;
     padding: 0.6rem;
     border: none;
@@ -336,7 +338,7 @@ input {
 }
 
 .comment-form-button {
-    background-color: #007BFF;
+    background-color: #007bff;
     color: #fff;
     padding: 0.6rem;
     border: none;
@@ -375,11 +377,16 @@ input {
         font-size: 1.2rem;
     }
 
-    main, footer, #btn-top, .alert-form_error, .alert-form_success {
+    main,
+    footer,
+    #btn-top,
+    .alert-form_error,
+    .alert-form_success {
         font-size: 0.8rem;
     }
 
-    #references, figcaption {
+    #references,
+    figcaption {
         font-size: 0.7rem;
     }
 
@@ -401,7 +408,13 @@ input {
         font-size: 2rem;
     }
 
-    main, footer, #btn-top, #references, figcaption, .alert-form_error, .alert-form_success {
+    main,
+    footer,
+    #btn-top,
+    #references,
+    figcaption,
+    .alert-form_error,
+    .alert-form_success {
         font-size: 0.6rem;
     }
 }
@@ -411,7 +424,13 @@ input {
         font-size: 0.6rem;
     }
 
-    main, footer, #btn-top, #references, figcaption, .alert-form_error, .alert-form_success {
+    main,
+    footer,
+    #btn-top,
+    #references,
+    figcaption,
+    .alert-form_error,
+    .alert-form_success {
         font-size: 0.6rem;
     }
 
@@ -425,7 +444,9 @@ input {
 }
 
 @media (max-width: 440px) {
-    #nav-flexbox, .alert-form_error, .alert-form_success {
+    #nav-flexbox,
+    .alert-form_error,
+    .alert-form_success {
         font-size: 0.5rem;
     }
 }
