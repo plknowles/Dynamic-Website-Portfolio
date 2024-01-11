@@ -150,7 +150,7 @@ figcaption {
 h1 {
     font-family: "Courier Prime", monospace;
     color: black;
-    font-size: 6rem;
+    font-size: 5rem;
     margin: 0.5rem;
 }
 
@@ -319,8 +319,11 @@ label {
 input {
     width: 100%;
     padding: 0.5rem;
-    margin-bottom: 1rem;
     box-sizing: border-box;
+}
+
+.form-description {
+    color: #007bff;
 }
 
 .login-form-button {
